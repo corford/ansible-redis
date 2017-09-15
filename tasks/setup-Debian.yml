@@ -1,0 +1,19 @@
+---
+- name: Add custom repo sigining key
+  apt_key:
+    id: "{{ redis_ubuntu_apt_signing_key_id }}"
+    state: present
+  when: redis_use_custom_ubuntu_repo|bool
+
+- name: Add custom repo
+  apt_repository:
+    repo: "deb {{ redis_ubuntu_apt_repo }} {{ ansible_distribution_release }} main"
+    state: present
+  when: redis_use_custom_ubuntu_repo|bool
+
+- name: Ensure Redis is installed.
+  apt:
+    name: "{{ redis_package }}"
+    update-cache: yes
+    cache_valid_time: 3600    
+    state: present
