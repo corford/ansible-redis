@@ -2,6 +2,7 @@
 - name: Add custom repo sigining key
   apt_key:
     id: "{{ redis_ubuntu_apt_signing_key_id }}"
+    keyserver: "{{ redis_ubuntu_apt_key_server }}"
     state: present
   when: redis_use_custom_ubuntu_repo|bool
 

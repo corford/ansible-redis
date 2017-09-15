@@ -4,7 +4,8 @@ redis_enablerepo: epel
 
 # Used for Ubuntu only. Allows the use of an alternative repo (defaults to the PPA provided by Chris Lea)
 redis_use_custom_ubuntu_repo: yes
-redis_ubuntu_apt_signing_key_id: 1024R/136221EE520DDFAF0A905689B9316A7BC7917B12
+redis_ubuntu_apt_signing_key_id: 136221EE520DDFAF0A905689B9316A7BC7917B12
+redis_ubuntu_apt_key_server: keyserver.ubuntu.com
 redis_ubuntu_apt_repo: http://ppa.launchpad.net/chris-lea/redis-server/ubuntu
 
 redis_port: 6379
