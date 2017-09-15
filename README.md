@@ -1,5 +1,5 @@
 # Ansible Role: Redis
-Ansible role for redis (based on geerlingguy) with support for using a custom PPA repo when provisioning an Ubuntu machine.
+Ansible redis role (based on geerlingguy) with support for using a custom PPA repo when provisioning Ubuntu machines.
 
 ## Variable additions (shown with their defaults)
 ```
