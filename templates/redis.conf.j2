@@ -41,6 +41,7 @@ maxmemory-samples {{ redis_maxmemory_samples }}
 appendonly {{ redis_appendonly }}
 appendfsync {{ redis_appendfsync }}
 no-appendfsync-on-rewrite no
+aof-use-rdb-preamble yes
 
 {% for include in redis_includes %}
 include {{ include }}
