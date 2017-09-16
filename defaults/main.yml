@@ -1,32 +1,32 @@
 ---
 # Used for RHEL/CentOS/Fedora only. Allows the use of different repos.
-redis_enablerepo: epel
+redis_enablerepo: "epel"
 
 # Used for Ubuntu only. Allows the use of an alternative repo (defaults to the PPA provided by Chris Lea)
-redis_use_custom_ubuntu_repo: yes
-redis_ubuntu_apt_signing_key_id: 136221EE520DDFAF0A905689B9316A7BC7917B12
-redis_ubuntu_apt_key_server: keyserver.ubuntu.com
-redis_ubuntu_apt_repo: http://ppa.launchpad.net/chris-lea/redis-server/ubuntu
+redis_use_custom_ubuntu_repo: "yes"
+redis_ubuntu_apt_signing_key_id: "136221EE520DDFAF0A905689B9316A7BC7917B12"
+redis_ubuntu_apt_key_server: "keyserver.ubuntu.com"
+redis_ubuntu_apt_repo: "http://ppa.launchpad.net/chris-lea/redis-server/ubuntu"
 
 redis_port: 6379
-redis_bind_interface: 127.0.0.1
-redis_unixsocket: ''
+redis_bind_interface: "127.0.0.1"
+redis_unixsocket: ""
 redis_timeout: 300
 
 redis_loglevel: "notice"
-redis_logfile: /var/log/redis/redis-server.log
+redis_logfile: "/var/log/redis/redis-server.log"
 
 redis_databases: 16
 
 # Set to an empty set to disable persistence (saving the DB to disk).
 redis_save:
-  - 900 1
-  - 300 10
-  - 60 10000
+  - "900 1"
+  - "300 10"
+  - "60 10000"
 
 redis_rdbcompression: "yes"
-redis_dbfilename: dump.rdb
-redis_dbdir: /var/lib/redis
+redis_dbfilename: "dump.rdb"
+redis_dbdir: "/var/lib/redis"
 
 redis_maxmemory: 0
 redis_maxmemory_policy: "noeviction"
