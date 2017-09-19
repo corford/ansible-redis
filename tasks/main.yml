@@ -11,15 +11,15 @@
   tags: redis
 
 # Setup/install tasks.
-- include: setup-RedHat.yml
+- include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
   tags: redis
 
-- include: setup-Debian.yml
+- include_tasks: setup-Debian.yml
   when: ansible_os_family == 'Debian'
   tags: redis
 
-- include: setup-Archlinux.yml
+- include_tasks: setup-Archlinux.yml
   when: ansible_os_family == 'Archlinux'
   tags: redis
 
